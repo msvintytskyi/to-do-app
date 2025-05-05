@@ -8,6 +8,10 @@ function TodoApp() {
       id: 1,
       text: "MasterTodo",
     },
+    {
+      id: 2,
+      text: "DevBranchTodo",
+    },
   ]);
 
   return (
