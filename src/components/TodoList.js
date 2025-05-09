@@ -1,15 +1,15 @@
-function TodoList({ todos }) {
+import TodoItem from "./TodoItem";
+
+function TodoList({ todos, handleDeleteTodo }) {
   const todosList = todos.map((todo) => {
     return (
-      <li key={todo.id}>
-        {todo.text}
-      </li>
+      <TodoItem key={todo.id} todo={todo} handleDeleteTodo={handleDeleteTodo} />
     );
   });
 
   return (
     <div className="todo-list">
-      {todosList}
+      <ul>{todosList}</ul>
     </div>
   );
 }
