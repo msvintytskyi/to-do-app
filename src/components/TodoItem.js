@@ -1,8 +1,8 @@
-function TodoItem({ todo, handleDeleteTodo }) {
+function TodoItem({ todo, onDeleteTodo }) {
   return (
     <>
       <li>{todo.text}</li>
-      <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+      <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
     </>
   );
 }

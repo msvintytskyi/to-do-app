@@ -31,7 +31,7 @@ function TodoApp() {
     <div>
       <h1>TodoApp</h1>
       <AddTodo addTodo={handleAddTodo} />
-      <TodoList todos={todos} handleDeleteTodo={handleDeleteTodo} />
+      <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
     </div>
   );
 }
