@@ -13,15 +13,15 @@ function AddTodo({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="add-todo-form">
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Add a todo"
-        aria-label="Add a task"
+        placeholder="Add a task…"
+        aria-label="Add a task…"
       />
-      <button type="submit">Add</button>
+      <button type="submit" aria-label="Add todo">+</button>
     </form>
   );
 }

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #78c1f3;
+}
+
+.todo-app {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 75px;
+  padding: 0 35px 20px 35px;
+  border-radius: 45px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo-app h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 18px;
+  padding: 0;
+}
+
+.add-todo-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.add-todo-form input {
+  width: 100%;
+  height: 36px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #edeef0;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+.add-todo-form button {
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 50%;
+  background: #78c1f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: background 0.2s;
+  padding : 0;
+  line-height: 1;
+}
+
+.add-todo-form button:hover {
+  background: #4a90e2;
+}
+
+.todo-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e0e0e0;
+  border-radius: 16px;
+  padding: 8px 12px 8px 18px;
+  margin: 0;
+  list-style: none;
+  
+}
+
+.todo-text {
+  flex: 1;
+  color: #333;
+  word-break: break-word;
+  white-space: pre-wrap;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.todo-list button {
+  background: #f76d6d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  padding : 0;
+  line-height: 1;
+}
+
+.todo-list button:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 0 16px 16px 16px;
+    border-radius: 26px;
+    margin-top: 24px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .add-todo-form input {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}

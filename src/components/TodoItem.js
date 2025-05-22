@@ -1,9 +1,9 @@
 function TodoItem({ todo, onDeleteTodo }) {
   return (
-    <>
-      <li>{todo.text}</li>
-      <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
-    </>
+    <li>
+      <span className="todo-text">{todo.text}</span>
+      <button onClick={() => onDeleteTodo(todo.id)} aria-label="Delete todo">x</button>
+    </li>
   );
 }
 
