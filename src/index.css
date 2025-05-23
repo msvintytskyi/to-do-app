@@ -110,7 +110,7 @@ body {
   font-weight: 400;
 }
 
-.todo-list button {
+.todo-list .delete-button {
   background: #f76d6d;
   color: #fff;
   border: none;
@@ -129,7 +129,7 @@ body {
   line-height: 1;
 }
 
-.todo-list button:hover {
+.todo-list .delete-button:hover {
   background: #c0392b;
 }
 
@@ -144,4 +144,113 @@ body {
     font-size: 15px;
     padding: 8px 10px;
   }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px 22px 16px 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.24);
+  min-width: 280px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal h2 {
+  align-self: center;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.modal input[type="text"] {
+  width: 100%;
+  height: 36px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  background: #f7f7f7;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.modal input[type="text"]:focus {
+  border: 1.5px solid #78c1f3;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modal button[type="submit"],
+.modal button[type="button"] {
+  min-width: 90px;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+}
+
+.modal button[type="submit"] {
+  background: #78c1f3;
+  color: #fff;
+}
+
+.modal button[type="submit"]:hover {
+  background: #4a90e2;
+}
+
+.modal button[type="button"] {
+  background: #f76d6d;
+  color: #fff;
+}
+
+.modal button[type="button"]:hover {
+  background: #c0392b;
+}
+
+/* --- Edit Button Styles --- */
+.edit-button {
+  background: #ffe082;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.edit-button:hover {
+  background: #ffb347;
+  color: #222;
 }
